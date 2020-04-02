@@ -21,7 +21,7 @@ export class HeroesComponent implements OnInit {
   }
 
   verHeroeDetalle(id:string){
-    console.log('Se pide el heroe #' +id);
+    //console.log('Se pide el heroe #' +id);
     this._router.navigate( ['/heroe',id] );
 
   }
