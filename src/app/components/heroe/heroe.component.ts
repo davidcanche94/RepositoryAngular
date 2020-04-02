@@ -20,6 +20,7 @@ export class HeroeComponent implements OnInit {
       console.log(params['id']);
       if(params['id'] >= 0){
         this.heroe = this._heroesService.getHeroe(params['id']);
+        this.showAlert = false;
         console.log(this.heroe);
       }else{
         //console.log('Pss no me llego nada carnal');
