@@ -1,0 +1,29 @@
+<div class="container main-container animated fadeIn">
+
+    <div class="row" *ngIf="!showAlert">
+
+        <div class="col-sm-12 col-md-6 align-self-center" style="margin-bottom: 10px;">
+            <img [src]="heroe.gif" class="img-fluid" [alt]="heroe.nombre" > 
+        </div>
+        <div class="col align-self-center">
+            <h1 class="text-center">{{ heroe.nombre | uppercase }} <small> ({{ heroe.aparicion | date:'yyyy' }}) </small> </h1>
+            <hr>
+            <p class="text-monospace text-justify"> {{ heroe.bio }} </p>
+            <p class="text-center"><small class="font-italic">Comic: {{ heroe.casa }}</small></p>
+
+            <a [routerLink]="['/heroes']" class="btn btn-outline-danger btn-block">Regresar</a>
+        </div>
+
+
+
+    </div>
+
+    <div class="row" *ngIf="showAlert">
+        <div class="col-md-12" >
+            <div class="alert alert-danger" role="alert">
+                No existen resultados para el término: {{ busqueda }}
+            </div>
+        </div>
+    </div>
+    
+</div>
