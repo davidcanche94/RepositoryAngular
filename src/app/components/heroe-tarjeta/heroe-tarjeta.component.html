@@ -1,1 +1,15 @@
-<p>heroe-tarjeta works!</p>
+<div class="card" >
+    <img [src]="heroe.img" class="card-img-top img-fluid" [alt]="heroe.nombre">
+    <div class="card-body">
+        <h5 class="card-title text-center">{{ heroe.nombre }}</h5>
+        <p class="card-text text-justify">{{ heroe.bio }}</p>
+        <p class="card-text"><small class="text-muted">Fecha aparición: {{ heroe.aparicion | date:'MMMM yyyy' }}</small></p>
+
+         <button (click)="verHeroeDetalle()"
+            type="button" class="btn btn-outline-success btn-block">
+            Ver más...
+        </button>
+
+    <!--<a [routerLink]="['/heroe',i]" class="btn btn-outline-primary">Ver más link...</a> -->
+    </div>
+</div>
